@@ -1,10 +1,10 @@
-As a user I want to have a clean UI
-As a user I want the application to be intuitive
-As a user I want multiple options for my queries
-As a user I want the full information of the recipes on one simple to read page
-As a user I want navagation on the site to be easy
-As a return user I want past searches to be available
-As a return user I want recommandations for new recipes based on my past searches
-As a return user I want popular searches to be available for new ideas
-As a administrator I want to see a clear list of users
-As a administrator I want users to have a way to give feedback
+As a user I want to have a clean UI - high priority
+As a user I want the application to be intuitive - high priority
+As a user I want multiple options for my queries - medium priority
+As a user I want the full information of the recipes on one simple to read page - high priority
+As a user I want navagation on the site to be easy -high priority
+As a return user I want past searches to be available - medium priority
+As a return user I want recommandations for new recipes based on my past searches - low priority
+As a return user I want popular searches to be available for new ideas - low priority
+As a administrator I want to see a clear list of users - medium priority
+As a administrator I want users to have a way to give feedback - medium priority
