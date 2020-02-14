@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/9a861ea4d6.js" crossorigin="anonymous"></script>
+    <title>GoodEats</title>
+
+<body>
+    <!--Top bar & Icon-->
+      <header class = "header">
+      <i class="fas fa-utensils"></i>
+      <h1 class = "head">GoodEats</h1>
+      <p id="navComment">Search for new recipes</p>
+      </header>
+
+<div><img  class ='banner-image'src="https://png.pngtree.com/thumb_back/fw800/back_our/20190625/ourmid/pngtree-desktop-food-banner-image_257069.jpg"></div>
+
+    <!--App description-->
+      <p id="desc">Tired of the same boring meals day after day?  GoodEats helps you find new recipes to try out.  Simply enter in an ingredient or dish and find hundreds of results!  After your done check out the map on the bottom of the page to find markets in your area to pick up your ingredients!</p>
+
+    <!--Form for Searches-->
+    <h1 id="description">Enter an ingredient to get started:</h1>
+      <form action="#" class="js-search-form">
+        <label for="query"></label>
+        <input required type="text" class="js-query" placeholder="beef, pork, ect">
+        <button class="js-submit" type="submit">Search</button>
+      </form>
+      
+    <!--Shows Results-->
+      <section class="results hidden js-results"></section>
+    </div>
+
+    <!--Google Maps with supermarkets in area-->
+    <h3 class='map-disc'>Look below for a place to grab your ingredients:
+    </h3>
+    <div id ='map'>
+    </div>
+
+     <!--Footer & Copyright-->
+     <footer>
+       <div class="copyright">
+          &copy;Colin Faust. Powered by
+          <a href="https://forkify-api.herokuapp.com/" target="_blank" class="link">Forkify.</a>
+       </div>
+     </footer>
+
+     <!--Scripts-->
+     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCB4_uUdLBpcyzNFxi-6y1N71Tjwy0vsL8&callback=initMap">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>
