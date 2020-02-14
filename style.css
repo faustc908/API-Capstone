@@ -1,0 +1,147 @@
+* {
+    margin: 0 auto;
+    padding: 0px;
+    text-align:center;
+    font-family: 'Nunito Sans', sans-serif;
+} 
+
+html, body{
+  height:100%;
+  background-color:rgb(255, 255, 255);
+}
+
+.banner-image{
+  width:100%;
+  height:280px;
+}
+
+.result-img{
+  max-width:100%;
+  height:auto;
+  padding-bottom:20px;
+  padding-top:20px;
+}
+
+.results-list{
+  list-style-type:none;
+  padding-top:28px;
+  background-color:white;
+}
+
+header, footer{
+  text-align: center;
+  float: center;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+footer{
+  padding-bottom:0px;
+}
+
+.head{
+  float:left;
+  text-decoration:none;
+  color:rgba(0, 0, 0, 0.601);
+  font-size:25px;
+  font-style:italic;
+}
+
+header{
+  height: 25px;
+  background-color:rgb(255, 255, 255);
+}
+
+.results{
+  min-height: 100%;
+}
+
+h1{
+  font-size:18px;
+}
+
+.copyright{
+  height: 40px;
+  color: rgba(0, 0, 0, 0.601);
+  background-color:rgb(255, 252, 252);
+}
+
+#desc{
+  font-weight:bold;
+  font-style:italic;
+  width:70%;
+  padding-top:10px;
+}
+
+#navComment{
+  text-align: right;
+  color: rgba(0, 0, 0, 0.601);
+  font-size:20px;
+  font-style:italic;
+}
+
+#description{
+  padding-top:40px;
+  font-size:15px;
+  width:70%;
+}
+
+i{
+  float:left;
+  font-size:25px;
+  color:rgb(178, 178, 178);
+  padding-top:3px;
+  padding-right:6px;
+  padding-left:6px;
+}
+
+.link{
+  text-decoration:none;
+}
+
+.js-submit{
+background-color: white; 
+  color: black; 
+  border: 2px solid rgba(154, 231, 148, 0.601);
+  width:70px;
+  border-radius:50px;
+}
+
+.js-submit:hover {
+  background-color: rgba(70, 153, 64, 0.601);;
+  color: white;
+}
+
+.js-query{
+  border-radius:50px;
+  border:2px solid black;
+}
+
+.js-search-form{
+  padding-top:25px;
+  padding-bottom:25px;
+  width:70%;
+}
+
+.js-results{
+  width:70%;
+}
+
+.recipe-title{
+  font-size:15px;
+  font-weight:bold;
+  text-decoration:underline;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+
+#map {
+  height:60%;
+  width:60%;
+   
+}
+
+.map-disc{
+  padding-top:30px;
+  padding-bottom:40px;
+}
