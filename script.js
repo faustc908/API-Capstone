@@ -1,6 +1,6 @@
 'use strict'
 
-/*Call for recipe API & response*/
+/* Call for recipe API & response */
 
 function getRecipe(query, displayCallback) {
    fetch(`https://forkify-api.herokuapp.com/api/search/?q=${query}`)
@@ -10,7 +10,7 @@ function getRecipe(query, displayCallback) {
     return responseJson
   }) 
   
-/*Catch any errors that occur on the call*/
+/* Catch any errors that occur on the recipe call */
 
   .then(responseJson => displayResults(responseJson))
   .catch(error => alert('Invalid Entry'));
@@ -53,7 +53,7 @@ $(function() {
   listenToInput();
 }); 
 
-/*Google maps with geolocator*/
+/* Google maps with geolocator */
 
 let map, infoWindow;
  function initMap() {
@@ -63,14 +63,13 @@ let map, infoWindow;
  });
  infoWindow = new google.maps.InfoWindow;
 
- /* Try geolocation.*/
+/* Try geolocation */
   if (navigator.geolocation) {
   navigator.geolocation.getCurrentPosition(function(position) {
   let pos = {
   lat: position.coords.latitude,
   lng: position.coords.longitude
   };
-
   infoWindow.setPosition(pos);
   infoWindow.setContent('Location found.');
   infoWindow.open(map);
@@ -79,15 +78,17 @@ let map, infoWindow;
   handleLocationError(true, infoWindow, map.getCenter());
   });
   } else {
-  /* Browser doesn't support Geolocation*/
+/* Error trigger if broswer can't display map */
    handleLocationError(false, infoWindow, map.getCenter());
     }
   }
 
+/* Error messages */
+
   function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(browserHasGeolocation ?
-  'Error: The Geolocation service failed.' :
+  'Error: Geolocation offline.' :
   'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
   }
