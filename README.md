@@ -10,7 +10,7 @@ Also shows markets in the area of the viewer where they can buy ingredients with
 Screenshots:
 Landing Page:
 
-https://photos.google.com/u/0/album/AF1QipMJu-vShzHsgYfxpeL5Jw6Pijx-Nh2JV-Yu8LXf
+https://photos.google.com/u/0/album/AF1QipMJu-vShzHsgYfxpeL5Jw6Pijx-Nh2JV-Yu8LXf/photo/AF1QipNoRyPj1EsyR4v3g-kF6qDrQWKy02cF7XTcubdV
 
 Page with results:
 
