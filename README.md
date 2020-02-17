@@ -10,9 +10,11 @@ Also shows markets in the area of the viewer where they can buy ingredients with
 Screenshots:
 Landing Page:
 
+https://photos.google.com/u/0/album/AF1QipMJu-vShzHsgYfxpeL5Jw6Pijx-Nh2JV-Yu8LXf
+
 Page with results:
 
-Maps:
+https://photos.google.com/u/0/album/AF1QipMJu-vShzHsgYfxpeL5Jw6Pijx-Nh2JV-Yu8LXf/photo/AF1QipO2fgnLt4ABf0TltMMwp1I_rW1bFZYd1DChyncj
 
 Motivation:  
 I love cooking and am always looking for new recipes.  I thought it would be useful to people like me. 
