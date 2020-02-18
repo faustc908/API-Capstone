@@ -17,8 +17,8 @@ html, body{
 }
 
 .result-img{
-  max-width:100%;
-  height:auto;
+  max-width:70%;
+  height:70%;
   padding-bottom:20px;
   padding-top:20px;
 }
@@ -34,6 +34,11 @@ header, footer{
   float: center;
   width: 100%;
   padding-bottom: 10px;  
+}
+
+.directions-link{
+  text-decoration:none;
+  padding-right:25px;
 }
 
 footer{
@@ -132,30 +137,22 @@ i{
 
 .js-search-form{
   padding-bottom:25px;
-  width:50%;
+  width:65%;
   border: 2px solid rgb(105, 105, 105);
 }
 
 .js-results{
   width:70%;
+  height:70%;
+  display:inline-block;
+  
 }
 
 .recipe-title{
   font-size:15px;
   font-style:italic;
-  text-decoration:underline;
   padding-top:10px;
   padding-bottom:10px;
-}
-
-#map {
-  height:60%;
-  width:60%;  
-}
-
-.map-disc{
-  padding-top:30px;
-  padding-bottom:40px;
 }
 
 .results-link{
@@ -166,6 +163,25 @@ i{
   padding-top:20px;
 }
 
-@media screen and (max-width: 320px){
-  
+@media (min-width: 768px){
+
+  .js-search-form{
+    max-width:40%;
+  }
+
+}
+
+@media (min-width: 1025px){
+
+  .js-search-form{
+    max-width:25%;
+  }
+
+  .js-query{
+    max-width:35%;
+  }
+
+  #desc{
+    max-width:50%;
+  }
 }
