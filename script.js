@@ -13,7 +13,7 @@ function getRecipe(query, displayCallback) {
 /* Catch any errors that occur on the recipe call */
 
   .then(responseJson => displayResults(responseJson))
-  .catch(error => alert('Invalid Entry'));
+  .catch(error => alert('Chose another ingredient'));
 }
 
 /* Show results on DOM */
@@ -23,7 +23,9 @@ function displayResults(responseJson) {
   (`<ul class='results-list'> ${responseJson.recipes.map(recipe => 
   `<img class='result-img' src=${recipe.image_url}>
   <h4 class='recipe-title'>${recipe.title}</h4>
-  <a class='results-link' href='https://forkify-api.herokuapp.com/api/get?rId=${recipe.recipe_id}'>Get the recipe!</a>
+  <a class='directions-link' href='${recipe.source_url}'>Instructions</a>
+  <a class='ingredients'
+   href="https://forkify-api.herokuapp.com/api/get?rId=${recipe.recipe_id}">Ingredients</a>
   <p class='results-author'>Published by: ${recipe.publisher}</p>
    `)} </ul>`)
   $('.results').removeClass('hidden');
@@ -46,6 +48,32 @@ function listenToInput() {
   });
 }
 
+/* Event listener for ingredients button */
+
+/*function getIngredients(){
+$('.ingredients').on('click', 'a.ingredients', event => {
+  event.preventDefault();
+  const url = event.currentTarget.href
+  fetch(url)
+  .then (response => response.json())
+  .then (responseJson =>{
+    console.log(responseJson);
+    
+  })  
+  .then(responseJson => displayIngredient(responseJson))
+})}
+
+function displayIngredient(responseJson) {
+  $('.results').append
+  (`<ul class='results-list'> ${responseJson.recipes.map(recipe => 
+  `<a class='ingredients'
+   href="https://forkify-api.herokuapp.com/api/get?rId=${recipe.recipe_id}">Ingredients</a>
+   `)} </ul>`)
+  $('.results').removeClass('hidden');
+}*/
+
+
+
 /* Listen for input */
 
 $(function() {
@@ -53,42 +81,3 @@ $(function() {
   listenToInput();
 }); 
 
-/* Google maps with geolocator */
-
-let map, infoWindow;
- function initMap() {
- map = new google.maps.Map(document.getElementById('map'), {
- center: {lat: -34.397, lng: 150.644},
- zoom: 6
- });
- infoWindow = new google.maps.InfoWindow;
-
-/* Try geolocation */
-  if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(function(position) {
-  let pos = {
-  lat: position.coords.latitude,
-  lng: position.coords.longitude
-  };
-  infoWindow.setPosition(pos);
-  infoWindow.setContent('Location found.');
-  infoWindow.open(map);
-  map.setCenter(pos);
-  }, function() {
-  handleLocationError(true, infoWindow, map.getCenter());
-  });
-  } else {
-/* Error trigger if broswer can't display map */
-   handleLocationError(false, infoWindow, map.getCenter());
-    }
-  }
-
-/* Error messages */
-
-  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(browserHasGeolocation ?
-  'Error: Geolocation offline.' :
-  'Error: Your browser doesn\'t support geolocation.');
-  infoWindow.open(map);
-  }
