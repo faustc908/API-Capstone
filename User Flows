@@ -2,4 +2,4 @@ User Flow-
 
 User lands on main page ----->user sees main site text explaining how to access information
                         ----->user sees input field for query----------->query appends recipes relevant to search.
-                        ----->user sees geolocated position to shop for ingredients in their area.
+                        
