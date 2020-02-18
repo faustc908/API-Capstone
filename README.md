@@ -5,7 +5,6 @@ Live link: - https://recipe-api-project-goodeats.cfaust.repl.co/
 Summary:
 An application designed to display recipes based on an ingredient search parameter.  
 Gives results of a variety of recipes, the ingredients, and the publisher of the recipe utilizing the forkify API.
-Also shows markets in the area of the viewer where they can buy ingredients with Google Maps.
 
 Screenshots:
 Landing Page:
