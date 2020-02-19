@@ -163,6 +163,22 @@ i{
   padding-top:20px;
 }
 
+#notification {
+  border: 1px solid #400;
+  background: rgb(118, 180, 89);
+  padding: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 200px;
+  min-height: 50px;
+  color: white;
+}
+
+.ingredients{
+  text-decoration:none;
+}
+
 @media (min-width: 768px){
 
   .js-search-form{
