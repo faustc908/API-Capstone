@@ -8,7 +8,7 @@ function getRecipe(query, displayCallback) {
   .then(responseJson => {
     console.log(responseJson)
     return responseJson
-  }) 
+}) 
   
 /* Catch any errors that occur on the recipe call */
 
@@ -34,12 +34,11 @@ function showNotification(msg) {
 
 function displayResults(responseJson) {
   $('.results').empty().append
-  (`<ul class='results-list'> ${responseJson.recipes.map(recipe => 
-  `<img class='result-img' src=${recipe.image_url}>
+  (`<ul class='results-list'> ${responseJson.recipes.map(recipe =>
+  `<h2>Your Results</h2>
+  <img class='result-img' src=${recipe.image_url}>
   <h4 class='recipe-title'>${recipe.title}</h4>
-  <a class='directions-link' href='${recipe.source_url}'>Instructions</a>
-  <a class='ingredients'
-   href="https://forkify-api.herokuapp.com/api/get?rId=${recipe.recipe_id}">Ingredients</a>
+  <a class='directions-link' href='${recipe.source_url}'>Find the recipe here!</a>
   <p class='results-author'>Published by: ${recipe.publisher}</p>
    `)} </ul>`)
   $('.results').removeClass('hidden');
@@ -68,3 +67,5 @@ $(function() {
   console.log('Event listener active');
   listenToInput();
 }); 
+
+
