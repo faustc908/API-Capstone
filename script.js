@@ -13,7 +13,21 @@ function getRecipe(query, displayCallback) {
 /* Catch any errors that occur on the recipe call */
 
   .then(responseJson => displayResults(responseJson))
-  .catch(error => alert('Chose another ingredient'));
+  .catch(error => showNotification('Invalid entry, chose different ingredient please'));
+}
+
+/* Displays a notification if ingredient can't be found */
+
+function showNotification(msg) {
+  let notification = $('<section id="notification">')
+  notification.html(`<p>${msg}</p>`)
+  $('body').append(notification)
+  setTimeout(function () {
+    let notification = $('#notification')
+    notification.hide(500, () => {
+      notification.remove()
+    })
+  }, 3e3)
 }
 
 /* Show results on DOM */
@@ -48,36 +62,9 @@ function listenToInput() {
   });
 }
 
-/* Event listener for ingredients button */
-
-/*function getIngredients(){
-$('.ingredients').on('click', 'a.ingredients', event => {
-  event.preventDefault();
-  const url = event.currentTarget.href
-  fetch(url)
-  .then (response => response.json())
-  .then (responseJson =>{
-    console.log(responseJson);
-    
-  })  
-  .then(responseJson => displayIngredient(responseJson))
-})}
-
-function displayIngredient(responseJson) {
-  $('.results').append
-  (`<ul class='results-list'> ${responseJson.recipes.map(recipe => 
-  `<a class='ingredients'
-   href="https://forkify-api.herokuapp.com/api/get?rId=${recipe.recipe_id}">Ingredients</a>
-   `)} </ul>`)
-  $('.results').removeClass('hidden');
-}*/
-
-
-
 /* Listen for input */
 
 $(function() {
   console.log('Event listener active');
   listenToInput();
 }); 
-
